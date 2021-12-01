@@ -1,0 +1,64 @@
+@import '../../../../assets/scss/variables';
+
+.friend-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    flex-direction: column;
+    min-width: fit-content;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+
+    @media (min-width: 800px) {
+        flex-direction: row;
+        height: 40px;
+    }
+
+    & > div {
+        display: flex;
+
+        img {
+            display: flex;
+            align-self: center;
+            margin-right: 5px;
+            border-radius: 20px;
+        }
+
+        .friend-info {
+            display: inline-block;
+            align-self: center;
+            overflow: hidden;
+            h4{
+                position: relative;
+                top: 5px;
+            }
+            h5{
+                position: relative;
+                bottom: 10px;
+                left: 8px;
+            } 
+        }
+    }
+
+    .friend-status {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 5px;
+
+        &.offline {
+            background-color: grey;
+            border-color: red;
+            box-shadow: 0px 0px 4px 1px $danger;
+            color: $danger;
+        }
+        &.online {
+            background-color: $success;
+            border-color: #78D965;
+            box-shadow: 0px 0px 4px 1px $success;
+        }
+ 
+    }
+    
+}

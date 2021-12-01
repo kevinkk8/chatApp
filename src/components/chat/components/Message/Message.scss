@@ -1,0 +1,70 @@
+@import '../../../../assets/scss/variables';
+
+// .creator {
+//     justify-content: flex-end;
+// }
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.message {
+    display: flex;
+    padding-right: 10px;
+    text-align: left;
+
+    @media only screen and (max-width: 400px) {
+            padding-right: 40px;
+            text-align: left;
+      }
+
+    p {
+        margin: 10px;
+    }
+
+    &>div {
+        border-radius: 20px;
+    }
+
+    .owner {
+        max-width: 350px;
+        position: relative;
+        left: 1%;
+        background-color: $bg-main;
+        color: white;
+        padding: 1px 7px;
+        margin: 5px;
+        margin-left: auto;
+        word-wrap: break-word;
+    }
+
+    .other-person {
+        width: 350px;
+        position: relative;
+        left: 20px;
+        background-color: #f5f6f8;
+        padding: 0 10px;
+        margin: 3px;
+        word-wrap: break-word;
+        
+        @media only screen and (max-width: 400px) {
+            left: 5px;
+      }
+    }
+
+    .dots {
+        margin: -5px 0 3px 0;
+    }
+
+    img {
+        max-width: 200px;
+    }
+    h6{
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
